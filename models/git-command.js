@@ -10,7 +10,12 @@ class GitCommand {
     }
 
     //Command: git status
-    // status(){}
+    status(){        
+        /*
+            For assignment #1:
+            Create logic here and run unit testing.
+        */
+    }
 
     //Command: git add <filename/file directory/wildcard> 
     add(path_file){

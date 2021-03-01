@@ -42,8 +42,10 @@ describe("Testing add()", function(){
         git.init();
 
         let output_add = git.add(".");
+        let output_status = git.status();
 
         expect(output_add).to.equal('Failed to add .! File is not modified or missing.');
+        expect(output_status).to.equal(undefined);
     });
 
     it('Should success with path file "*"', function(){
