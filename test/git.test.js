@@ -45,7 +45,7 @@ describe("Testing add()", function(){
         let output_status = git.status();
 
         expect(output_add).to.equal('Failed to add .! File is not modified or missing.');
-        expect(output_status).to.equal(undefined);
+        expect(output_status).to.equal('You have 2 change/s.\nviews/index.html\nassets/scripts/index.js');
     });
 
     it('Should success with path file "*"', function(){
