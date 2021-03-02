@@ -49,7 +49,7 @@ describe("Testing add()", function(){
         expect(output_status).to.equal('You have 0 change/s.\n');
     });
 
-    it('Should success with path file "*"', function(){
+    it('Should success with path_file "*"', function(){
         let wd = new WorkingDirectory();
         wd.addFile("index.html", "views", "<html>Hello</html>");
         wd.addFile("actions.yml", ".github/workflows", "");
@@ -60,7 +60,7 @@ describe("Testing add()", function(){
         let output_add = git.add("*");
         let output_status = git.status();
 
-        expect(output_add).to.equal('Successfully added as index file/s.');
-        expect(output_status).to.equal('You have 1 change/s.\n.github/workflows/actions.yml');
+        expect(output_add).to.equal('Failed to add *! File is not modified or missing.');
+        expect(output_status).to.equal('You have 2 change/s.\nviews/index.html\nassets/scripts/index.js');
     });
 })
